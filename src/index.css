@@ -1,0 +1,231 @@
+/* =============================================
+   গ্লোবাল CSS — ভৈরব দ্বীনি পাঠাগার
+   এই ফাইলে সমস্ত base styles এবং custom
+   utilities define করা আছে
+   ============================================= */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles — সমস্ত element এর default styles */
+@layer base {
+  * {
+    @apply box-border m-0 p-0;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    /* বাংলা font primary, Inter secondary */
+    @apply font-bangla bg-gray-50 text-gray-900 transition-colors duration-300;
+    font-feature-settings: "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Dark mode body */
+  .dark body {
+    @apply bg-dark-bg text-gray-100;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-dark-card;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+/* Custom component classes */
+@layer components {
+  /* Primary button style */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 
+           bg-primary-600 hover:bg-primary-700 active:bg-primary-800
+           text-white font-medium rounded-lg transition-all duration-200
+           shadow-sm hover:shadow-md focus:outline-none focus:ring-2 
+           focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50
+           disabled:cursor-not-allowed;
+  }
+
+  /* Secondary button style */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5
+           bg-white dark:bg-dark-card hover:bg-gray-50 dark:hover:bg-dark-border
+           text-gray-700 dark:text-gray-200 font-medium rounded-lg border
+           border-gray-200 dark:border-dark-border transition-all duration-200
+           shadow-sm hover:shadow-md focus:outline-none focus:ring-2
+           focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  /* Card container */
+  .card {
+    @apply bg-white dark:bg-dark-card rounded-xl shadow-card 
+           border border-gray-100 dark:border-dark-border
+           transition-all duration-300;
+  }
+
+  /* Card with hover effect */
+  .card-hover {
+    @apply card hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  /* Input field style */
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg border border-gray-200
+           dark:border-dark-border bg-white dark:bg-dark-card
+           text-gray-900 dark:text-gray-100 placeholder-gray-400
+           focus:outline-none focus:ring-2 focus:ring-primary-500
+           focus:border-transparent transition-all duration-200;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full 
+           text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400;
+  }
+
+  .badge-warning {
+    @apply badge bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400;
+  }
+
+  .badge-error {
+    @apply badge bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400;
+  }
+
+  .badge-info {
+    @apply badge bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white;
+  }
+
+  /* Glassmorphism card */
+  .glass-card {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-xl;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+
+  /* Skeleton loading shimmer */
+  .skeleton {
+    @apply bg-gray-200 dark:bg-dark-border rounded animate-pulse;
+  }
+
+  /* Page wrapper for animations */
+  .page-wrapper {
+    @apply min-h-screen;
+  }
+
+  /* Table styles */
+  .data-table {
+    @apply w-full border-collapse;
+  }
+
+  .data-table th {
+    @apply px-4 py-3 text-left text-xs font-semibold text-gray-500 
+           dark:text-gray-400 uppercase tracking-wider bg-gray-50 
+           dark:bg-dark-border/50 border-b border-gray-200 dark:border-dark-border;
+  }
+
+  .data-table td {
+    @apply px-4 py-3 text-sm text-gray-700 dark:text-gray-300 
+           border-b border-gray-100 dark:border-dark-border/50;
+  }
+
+  .data-table tr:hover td {
+    @apply bg-gray-50 dark:bg-dark-border/30;
+  }
+
+  /* Sidebar link active state */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm
+           font-medium transition-all duration-200 cursor-pointer;
+  }
+
+  .sidebar-link-active {
+    @apply sidebar-link bg-primary-600 text-white shadow-sm;
+  }
+
+  .sidebar-link-inactive {
+    @apply sidebar-link text-gray-600 dark:text-gray-400 
+           hover:bg-gray-100 dark:hover:bg-dark-border;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 
+           bg-clip-text text-transparent;
+  }
+
+  /* Gradient background */
+  .bg-gradient-primary {
+    @apply bg-gradient-to-br from-primary-600 via-primary-700 to-accent-700;
+  }
+
+  /* Scroll snap */
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+  }
+
+  .scroll-snap-center {
+    scroll-snap-align: center;
+  }
+
+  /* Hide scrollbar */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
