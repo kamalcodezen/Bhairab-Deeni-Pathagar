@@ -13,7 +13,7 @@ const DonateBook = () => {
   const [isSuccess, setIsSuccess] = useState(false)
   const [imagePreview, setImagePreview] = useState(null)
   
-  const { register, handleSubmit, formState: { errors }, trigger, watch } = useForm()
+  const { register, handleSubmit, formState: { errors }, trigger } = useForm()
 
   // Handlers
   const handleNext = async () => {

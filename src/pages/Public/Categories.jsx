@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BookOpen, Search, ArrowRight } from 'lucide-react'
+import { Search, ArrowRight } from 'lucide-react'
 import { categoriesData } from '../../data/categories'
 
 /* =============================================

@@ -4,8 +4,8 @@ import { useAuth } from '../../context/AuthContext'
 import { useTheme } from '../../context/ThemeContext'
 import { useLibrary } from '../../context/LibraryContext'
 import { 
-  BookOpen, Search, Bell, Menu, X, Sun, Moon, 
-  User as UserIcon, LogOut, Heart, BookMarked, LayoutDashboard 
+  BookOpen, Search, Menu, X, Sun, Moon, 
+  LogOut, Heart, BookMarked, LayoutDashboard 
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 

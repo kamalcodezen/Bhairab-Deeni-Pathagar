@@ -35,15 +35,7 @@ const Login = () => {
     }
   }
 
-  // Demo Credentials Filling
-  const fillDemoAdmin = () => {
-    const emailInput = document.querySelector('input[name="email"]')
-    const passInput = document.querySelector('input[name="password"]')
-    if(emailInput && passInput) {
-      // Direct DOM mutation for demo purpose only, usually bad practice in React 
-      // but works if we just want to quickly fill uncontrolled inputs or use setValue from RHF
-    }
-  }
+
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-dark-bg transition-colors">

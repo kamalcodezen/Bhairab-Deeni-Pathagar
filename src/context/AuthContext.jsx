@@ -7,6 +7,7 @@
    ভবিষ্যতে এখানে backend API call যোগ হবে।
    ============================================= */
 
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect, useCallback } from 'react'
 import toast from 'react-hot-toast'
 

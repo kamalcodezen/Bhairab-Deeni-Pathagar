@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Search, BookOpen, Users, BookMarked, ArrowRight, Library as LibraryIcon } from 'lucide-react'
+import { BookOpen, Users, BookMarked, ArrowRight, Library as LibraryIcon } from 'lucide-react'
 import { useLibrary } from '../../context/LibraryContext'
 import BookCard from '../../components/shared/BookCard'
 import { categoriesData } from '../../data/categories'
@@ -19,7 +19,10 @@ const Home = () => {
   return (
     <div className="page-wrapper">
       
-      {/* 1. Hero Section */}
+      {/* =========================
+         হোমপেজের হিরো সেকশন
+         এখানে main banner এবং call-to-action বাটন দেখানো হচ্ছে
+      ========================= */}
       <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
@@ -72,7 +75,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. Statistics Section */}
+      {/* =========================
+         লাইব্রেরির পরিসংখ্যান সেকশন
+         মোট বই, সদস্য এবং অন্যান্য স্ট্যাটিস্টিকস দেখানো হচ্ছে
+      ========================= */}
       <section className="py-12 bg-gray-50 dark:bg-dark-bg transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -97,7 +103,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. Featured Books Section */}
+      {/* =========================
+         জনপ্রিয় বইগুলোর গ্রিড সেকশন
+         সবচেয়ে বেশি পঠিত বইগুলো এখানে রেন্ডার করা হচ্ছে
+      ========================= */}
       <section className="py-16 bg-white dark:bg-dark-card transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-10">
@@ -122,7 +131,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. Categories Section */}
+      {/* =========================
+         বইয়ের ক্যাটাগরি সেকশন
+         এখানে Mock Data থেকে আসা ক্যাটাগরিগুলো দেখানো হচ্ছে
+      ========================= */}
       <section className="py-16 bg-gray-50 dark:bg-dark-bg transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -154,7 +166,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 5. CTA Banner */}
+      {/* =========================
+         বই দান করার জন্য CTA (Call to Action) ব্যানার
+         এখানে ক্লিক করলে ইউজারকে ডোনেশন পেজে নিয়ে যাবে
+      ========================= */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center text-white shadow-xl relative overflow-hidden">
@@ -175,7 +190,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 6. Newly Added Books */}
+      {/* =========================
+         নতুন যুক্ত হওয়া বইয়ের সেকশন
+         পাঠাগারে আসা নতুন বইগুলো এখানে দেখা যাবে
+      ========================= */}
       <section className="py-16 bg-white dark:bg-dark-card transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-10">

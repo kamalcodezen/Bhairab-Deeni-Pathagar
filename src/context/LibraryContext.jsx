@@ -7,6 +7,7 @@
    - Borrow requests
    ============================================= */
 
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect, useCallback } from 'react'
 import toast from 'react-hot-toast'
 import { booksData }  from '../data/books'

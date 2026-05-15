@@ -118,7 +118,7 @@ const UserDashboard = () => {
             <div className="space-y-4">
               <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-lg">
                 <p className="text-sm text-gray-800 dark:text-gray-200">
-                  আপনার <strong>"কুরআনুল কারীম"</strong> বইটির ধারের মেয়াদ আর ২ দিন বাকি আছে।
+                  আপনার <strong>&quot;কুরআনুল কারীম&quot;</strong> বইটির ধারের মেয়াদ আর ২ দিন বাকি আছে।
                 </p>
                 <span className="text-xs text-gray-500 mt-1 block">২ ঘন্টা আগে</span>
               </div>

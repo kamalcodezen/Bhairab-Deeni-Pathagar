@@ -1,5 +1,5 @@
 import { useLibrary } from '../../context/LibraryContext'
-import { BookCopy, Users, ArrowRightLeft, Gift, TrendingUp } from 'lucide-react'
+import { BookCopy, Users, ArrowRightLeft, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { 
