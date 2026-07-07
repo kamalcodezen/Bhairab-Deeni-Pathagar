@@ -4,12 +4,23 @@
    ============================================= */
 
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ShoppingCart, Trash2, ArrowRight, Minus, Plus, BookOpen, Star, ShieldCheck } from 'lucide-react'
 import { useCart } from '../../context/CartContext'
+import { useLibrary } from '../../context/LibraryContext'
 
 const Cart: React.FC = () => {
   const { cartItems, removeFromCart, clearCart, cartCount } = useCart()
+  const { borrowBook } = useLibrary()
+  const navigate = useNavigate()
+
+  const handleConfirmBooking = () => {
+    cartItems.forEach(({ book }) => {
+      borrowBook(book.id)
+    })
+    clearCart()
+    navigate('/dashboard/borrowed')
+  }
 
   // বইয়ের আনুমানিক মূল্য বা ফি হিসাব (লাইব্রেরি মেম্বারশিপ সার্ভিস চার্জ হিসেবে)
   const getBookPrice = (bookId: string) => {
@@ -161,7 +172,10 @@ const Cart: React.FC = () => {
             </div>
 
             {/* চেকআউট বাটন */}
-            <button className="w-full mt-6 bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:shadow-lg transition-all active:scale-[0.98] cursor-pointer">
+            <button 
+              onClick={handleConfirmBooking}
+              className="w-full mt-6 bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:shadow-lg transition-all active:scale-[0.98] cursor-pointer"
+            >
               বুকিং নিশ্চিত করুন
               <ArrowRight size={16} />
             </button>

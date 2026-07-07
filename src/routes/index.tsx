@@ -36,6 +36,7 @@ import AddBook from '../pages/Admin/AddBook'
 import BorrowManagement from '../pages/Admin/BorrowManagement'
 
 import NotFound from '../pages/NotFound'
+import UnderConstruction from '../pages/Shared/UnderConstruction'
 
 /* =============================================
    Protected Route Component
@@ -91,6 +92,11 @@ export const AppRoutes: React.FC = () => {
         <Route path="borrowed" element={<MyBorrowedBooks />} />
         <Route path="wishlist" element={<Wishlist />} />
         <Route path="donate" element={<DonateBook />} />
+        <Route path="history" element={<UnderConstruction title="ধার নেওয়ার ইতিহাস" />} />
+        <Route path="donations" element={<UnderConstruction title="আমার অনুদান" />} />
+        <Route path="notifications" element={<UnderConstruction title="নোটিফিকেশন" />} />
+        <Route path="profile" element={<UnderConstruction title="প্রোফাইল" />} />
+        <Route path="settings" element={<UnderConstruction title="সেটিংস" />} />
       </Route>
 
       {/* Admin Dashboard Routes */}
@@ -106,6 +112,10 @@ export const AppRoutes: React.FC = () => {
         <Route path="books" element={<ManageBooks />} />
         <Route path="books/add" element={<AddBook />} />
         <Route path="borrows" element={<BorrowManagement />} />
+        <Route path="users" element={<UnderConstruction title="ইউজার ম্যানেজমেন্ট" />} />
+        <Route path="donations" element={<UnderConstruction title="অনুদান ম্যানেজমেন্ট" />} />
+        <Route path="reports" element={<UnderConstruction title="রিপোর্টস ও অ্যানালিটিক্স" />} />
+        <Route path="settings" element={<UnderConstruction title="সেটিংস" />} />
       </Route>
 
       {/* 404 Route */}

@@ -61,7 +61,7 @@ const AddBook: React.FC = () => {
       
       await addBook(newBook)
       navigate('/admin/books')
-    } catch (error) {
+    } catch {
       toast.error('বই যোগ করতে সমস্যা হয়েছে')
     }
   }
