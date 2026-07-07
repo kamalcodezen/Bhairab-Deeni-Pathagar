@@ -1,71 +1,71 @@
-# ভৈরব দ্বীনি পাঠাগার (Bhairab Deeni Pathagar)
-একটি আধুনিক, দৃষ্টিনন্দন এবং ইউজার-ফ্রেন্ডলি লাইব্রেরি ম্যানেজমেন্ট সিস্টেম।
+# Bhairab Deeni Pathagar
+A modern, visually stunning, and user-friendly Library Management System.
 
 ---
 
-## 🌟 ফিচারসমূহ (Features)
+## 🌟 Key Features
 
-* **বইয়ের ক্যাটালগ ও ক্যাটাগরি:** পাঠকরা সহজেই বিষয়ভিত্তিক ক্যাটাগরি অনুযায়ী বিভিন্ন দ্বীনি ও অ্যাকাডেমিক বই ব্রাউজ করতে পারবেন।
-* **ডাইনামিক সার্চ:** যেকোনো বইয়ের নাম, লেখকের নাম বা মূল শব্দ (Keywords) লিখে রিয়েল-টাইমে বই অনুসন্ধান করা সম্ভব।
-* **ইন্টারেক্টিভ কার্ট ও বুকিং প্রসেস:** বুকিং কার্ট ফিচারের মাধ্যমে ব্যবহারকারী একাধিক বই তার কার্টে যোগ করে এক ক্লিকে বুকিং সম্পন্ন করতে পারেন।
-* **ব্যক্তিগত উইশলিস্ট:** পছন্দের বইগুলো পরবর্তীতে ধার নেওয়ার সুবিধার জন্য উইশলিস্টে যুক্ত রাখা যায়।
-* **ড্যাশবোর্ড (ইউজার ও অ্যাডমিন):** 
-  * **ইউজার ড্যাশবোর্ড:** বুকিং করা বইয়ের তালিকা, দান করা বই এবং প্রোফাইল দেখার ব্যবস্থা।
-  * **অ্যাডমিন ড্যাশবোর্ড:** নতুন বই যোগ করা, বইয়ের তথ্য আপডেট বা ডিলেট করা এবং বুকিং এর আবেদন অনুমোদন/বাতিল করার পূর্ণ প্যানেল।
-* **ডার্ক ও লাইট মোড:** যেকোনো ডিভাইসে স্বাচ্ছন্দ্যে ব্যবহারের জন্য আকর্ষক ডার্ক ও লাইট থিম মোড।
-* **নির্মাণাধীন সেকশন হ্যান্ডলিং:** রিয়েল-টাইম কাজের সুবিধার জন্য ডেভলপমেন্টাধীন সেকশনগুলোতে ব্যবহারকারীদের জন্য প্রিমিয়াম প্লেসহোল্ডার পেজ সংযুক্ত রয়েছে।
-
----
-
-## 🛠️ টেকনোলজি স্ট্যাক (Tech Stack)
-
-* **কোর:** React 18, TypeScript, Vite
-* **ডিজাইন ও স্টাইলিং:** Tailwind CSS, Framer Motion (অ্যানিমেশন), Lucide React (আইকন)
-* **স্টেট ও ফর্ম ম্যানেজমেন্ট:** React Context API, React Hook Form
-* **রাউটিং ও নোটিফিকেশন:** React Router DOM v6, React Hot Toast
+* **Book Catalog & Categorization:** Easily browse religious, academic, and general books categorized by genre.
+* **Real-time Search:** Instantly filter books by title, author name, or keywords.
+* **Interactive Cart & Booking Checkout:** Add multiple books to a booking cart and checkout with a single click.
+* **Personal Wishlist:** Keep track of favorite books to read later.
+* **Role-based Dashboards:**
+  * **User Dashboard:** View borrowed books, donation logs, history, and profile settings.
+  * **Admin Dashboard:** Full catalog management (add/edit/delete books) and approval logs to approve or reject book borrow requests.
+* **Theme Customization:** Smooth toggle between light and premium dark modes.
+* **Responsive Construction Screens:** Clean, modern placeholder pages for subpages under active development, preventing broken links.
 
 ---
 
-## 🚀 স্থানীয়ভাবে চালু করার নিয়ম (Local Setup)
+## 🛠️ Tech Stack
 
-১. প্রজেক্ট ডিরেক্টরিতে যান:
+* **Core:** React 18, TypeScript, Vite
+* **Styling & Icons:** Tailwind CSS, Framer Motion (animations), Lucide React (icons)
+* **State & Form Management:** React Context API, React Hook Form
+* **Routing & Alerts:** React Router DOM (v6), React Hot Toast
+
+---
+
+## 🚀 Local Installation & Run
+
+1. Navigate to the project directory:
    ```bash
    cd projects/pathagar-book
    ```
 
-২. ডিপেন্ডেন্সিগুলো ইনস্টল করুন:
+2. Install dependency packages:
    ```bash
    npm install
    ```
 
-৩. ডেভেলপমেন্ট সার্ভার চালু করুন:
+3. Launch the development server:
    ```bash
    npm run dev
    ```
 
-৪. ব্রাউজারে রান করুন:
+4. View in your browser:
    [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 📂 প্রোডাকশন বিল্ড ও লিন্টিং (Build & Lint)
+## 📂 Production Build & Checks
 
-* **বিল্ড চেক:**
+* **Build Bundle:**
   ```bash
   npm run build
   ```
-* **টাইপ চেক:**
+* **Run TypeScript checks:**
   ```bash
   npm run type-check
   ```
-* **কোড লিন্টিং:**
+* **Run Linting checks:**
   ```bash
   npm run lint
   ```
 
 ---
 
-## 🌐 লাইভ লিংক (Live Deployment)
+## 🌐 Live Production Link
 
-প্রজেক্টটি ভের্সেলে হোস্ট করা আছে:
+The application is deployed on Vercel at:
 [https://pathagar-book.vercel.app](https://pathagar-book.vercel.app)
